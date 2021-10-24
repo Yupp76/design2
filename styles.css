@@ -1,0 +1,263 @@
+:root {
+  --bg-image: url("https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80");
+  --prim-txt: "Varta", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --sec-txt: "Merriweather", "Times New Roman", Times, serif;
+  --header-max-height: 600px;
+  --default-txt-weight: 400;
+  --bold-txt-weight: 700;
+  --prim-color: #a06056;
+  --sec-color: #706458;
+  --txt-color: #533e3e;
+  --canvas-bg: #f3eee8;
+  --body-bg: #e8dbc9;
+  --bs-primary: #402d2a;
+  --txt-h1: 32px;
+  --txt-h2: 30px;
+  --txt-h3: 28px;
+  --txt-h4: 26px;
+  --txt-h5: 22px;
+  --txt-h6: 18px;
+  --txt-normal: 16px;
+  --txt-small: 14px;
+  --breakpoint-xxlg: 1400px;
+  --breakpoint-xlg: 1200px;
+  --breakpoint-lg: 992px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 576px;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--prim-txt);
+  font-weight: var(--default-txt-weight);
+  font-size: var(--default-txt-weight);
+  background-color: var(--body-bg);
+}
+
+ul,
+ol,
+li,
+dl {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  opacity: 1;
+}
+
+a span.fas {
+  font-size: 12px;
+}
+
+.txt-h1,
+h1,
+.txt-h2,
+h2,
+.txt-h3,
+h3 {
+  font-family: var(--sec-txt);
+  letter-spacing: 0.5px;
+  line-height: 1.55;
+}
+
+p,
+.txt-h4,
+h4,
+.txt-h5,
+h5,
+.txt-h6,
+h6 {
+  font-family: var(--prim-txt) !important;
+  line-height: 1.55;
+}
+
+p {
+  color: var(--txt-color);
+}
+
+h1 {
+  font-size: var(--txt-h1);
+}
+
+h2 {
+  font-size: var(--txt-h2);
+}
+
+h3 {
+  font-size: var(--txt-h3);
+}
+
+h4 {
+  font-size: var(--txt-h4);
+}
+
+h5 {
+  font-size: var(--txt-h5);
+}
+
+h6 {
+  font-size: var(--txt-h6);
+}
+
+.txt-h1 {
+  font-size: var(--txt-h1) !important;
+}
+
+.txt-h2 {
+  font-size: var(--txt-h2) !important;
+}
+
+.txt-h3 {
+  font-size: var(--txt-h3) !important;
+}
+
+.txt-h4 {
+  font-size: var(--txt-h4) !important;
+}
+
+.txt-h5 {
+  font-size: var(--txt-h5) !important;
+}
+
+.txt-h6 {
+  font-size: var(--txt-h6) !important;
+}
+
+.txt-prim {
+  color: var(--prim-color);
+}
+
+.txt-sec {
+  color: var(--sec-color);
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: #534b42;
+}
+
+.canvas-bg {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-blend-mode: color-burn;
+  background-color: var(--canvas-bg);
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlmBA_XO6Pv8-NPZlPMyKsCzxv73F4RK-2RGAJN3Ofh1e-8sKv2NlqJfjT3hUI_Fvlld4&usqp=CAU");
+}
+
+.container {
+  max-width: var(--breakpoint-xlg);
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav,
+.nav_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+header {
+  height: 100vh;
+  max-height: var(--header-max-height);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header::before {
+  content: "";
+  height: var(--header-max-height);
+  width: 100%;
+  background-image: linear-gradient(180deg, #2f141496 20%, #2f141400 100%);
+  position: absolute;
+}
+
+header * {
+  position: relative;
+}
+
+.navbar .logo.txt-h5 {
+  font-family: var(--sec-txt) !important;
+  font-size: var(--txt-h6) !important;
+  font-weight: var(--bold-txt-weight) !important;
+  color: var(--canvas-bg) !important;
+}
+
+footer .txt-h5 {
+  font-family: var(--sec-txt) !important;
+  font-size: var(--txt-h6) !important;
+  font-weight: var(--bold-txt-weight) !important;
+  color: var(--prim-color) !important;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2.5rem;
+}
+
+.menu_item a {
+  color: var(--canvas-bg);
+  opacity: 0.85;
+}
+
+.menu_item--active,
+.menu_item:hover a,
+.menu_item:focus a,
+.menu_item:active a {
+  opacity: 1;
+}
+
+.menu_item:not(:last-of-type) {
+  margin-right: 1.5rem;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--canvas-bg);
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+}
+
+.contact span {
+  color: var(--canvas-bg);
+}
+
+@media screen and (max-width: 630px) {
+  .contact {
+    display: none !important;
+  }
+  .menu {
+    margin-left: 0;
+    text-align: center;
+  }
+  .menu_item:not(:last-of-type) {
+    margin-right: 0;
+  }
+}
